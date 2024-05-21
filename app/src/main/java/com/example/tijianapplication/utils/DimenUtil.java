@@ -1,6 +1,9 @@
 package com.example.tijianapplication.utils;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import com.parttime.base.base.App;
 
@@ -26,5 +29,27 @@ public class DimenUtil {
     public static float pixelsToDip(Context context, final int pixels) {
         final float SCALE = context.getResources().getDisplayMetrics().density;
         return pixels / SCALE;
+    }
+
+    /**
+     * 获取屏幕宽度
+     */
+    public static int getScreenWidth() {
+        Display display =
+                ((WindowManager) App.getInstant().getSystemService(Context.WINDOW_SERVICE))
+                        .getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        display.getMetrics(dm);
+        return dm.widthPixels;
+    }
+
+
+    public static int getScreenHeight() {
+        Display display =
+                ((WindowManager) App.getInstant().getSystemService(Context.WINDOW_SERVICE))
+                        .getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        display.getMetrics(dm);
+        return dm.heightPixels;
     }
 }

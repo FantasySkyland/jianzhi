@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <com.example.tijianapplication.view.ShiLiEView2
+        android:id="@+id/shi_e_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@mipmap/img_e"
+        android:scaleType="fitXY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/color_939393"
+        android:text="保持手机在眼前40cm处，选择E的朝向" />
+
+    <LinearLayout
+        android:id="@+id/result_icon"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:id="@+id/tv_shili"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="4.0" />
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:layout_alignTop="@id/shi_e_view"
+        android:id="@+id/tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="上"
+        android:drawableTop="@mipmap/top"/>
+    <TextView
+        android:layout_alignRight="@id/shi_e_view"
+        android:layout_marginRight="80dp"
+        android:padding="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_alignTop="@id/shi_e_view"
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="左"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/left"/>
+    <TextView
+        android:layout_alignLeft="@id/shi_e_view"
+        android:layout_marginLeft="80dp"
+        android:padding="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_alignTop="@id/shi_e_view"
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="右"
+        android:drawablePadding="10dp"
+        android:drawableRight="@mipmap/right"/>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="280dp"
+        android:padding="10dp"
+        android:layout_alignTop="@id/shi_e_view"
+        android:id="@+id/tv_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="下"
+        android:drawableBottom="@mipmap/bottom"/>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="220dp"
+        android:padding="10dp"
+        android:layout_alignTop="@id/shi_e_view"
+        android:id="@+id/tv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:text="看不清楚" />
+</RelativeLayout>

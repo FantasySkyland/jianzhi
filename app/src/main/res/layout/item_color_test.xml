@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.tijianapplication.adapter.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_white"
+    android:padding="3dp">
+
+    <View
+        android:id="@+id/color_view"
+        android:background="@drawable/bg_radius_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</com.example.tijianapplication.adapter.SquareLayout>

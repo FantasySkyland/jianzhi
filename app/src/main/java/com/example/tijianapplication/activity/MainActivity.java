@@ -1,36 +1,39 @@
 package com.example.tijianapplication.activity;
 
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
 import android.view.MotionEvent;
-import android.widget.RadioGroup;
 
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.tijianapplication.R;
+import com.example.tijianapplication.fragment.SlbFragment;
+import com.example.tijianapplication.fragment.TestColorFragment;
+import com.example.tijianapplication.fragment.TestEyesFragment;
+import com.example.tijianapplication.fragment.TestSgFragment;
+import com.example.tijianapplication.fragment.TestSmFragment;
 import com.example.tijianapplication.utils.StatusBarUtils;
+import com.google.android.material.tabs.TabLayout;
 import com.parttime.base.base.BaseActivity;
 import com.parttime.base.constants.RoutMap;
 import com.parttime.base.rx.RxEvent;
-import com.parttime.base.util.PermissionUtil;
-import com.parttime.base.util.UserInfoUtil;
+import com.parttime.base.util.ToastUtils;
 
-import butterknife.BindView;
+import java.util.ArrayList;
 
 
 @Route(path = RoutMap.ACTIVITY_MAIN)
 public class MainActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
+    private ArrayList<Fragment> fragments = new ArrayList<>();
 
-
+    TabLayout tab;
+    ViewPager viewpager;
     private Fragment currentFragment;
 
     //缓存当前Tab的选中下标
@@ -83,8 +86,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initWidget() {
+        viewpager = findViewById(R.id.viewpager);
+        tab = findViewById(R.id.tab);
         StatusBarUtils.statusbar(this);
-
+        fragments.add(new SlbFragment());
+        fragments.add(new TestEyesFragment());
+        fragments.add(new TestSmFragment());
+        fragments.add(new TestSgFragment());
+        fragments.add(new TestColorFragment());
+        HomePagerAdapter fragmentPagerAdapter = new HomePagerAdapter(getSupportFragmentManager(),fragments);
+        viewpager.setAdapter(fragmentPagerAdapter);
+        tab.setupWithViewPager(viewpager);
 //        PermissionUtil.requestPermissionCombined(this, new PermissionUtil.CombinedPermissionListenerImp() {
 //            @Override
 //            public void onCombinedGranted() {
@@ -105,7 +117,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void handleDefaultEvent(RxEvent event) {
+        if (event.getEventType()==1){
 
+        }
     }
 
 

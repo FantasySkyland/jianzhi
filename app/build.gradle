@@ -12,15 +12,68 @@ android {
         targetSdkVersion rootProject.ext.targetSdk
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-
+        flavorDimensions "1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        debug {
+            // No debug config
+            storeFile file("jz1234.jks")
+            storePassword "jz1234"
+            keyAlias "jz1234"
+            keyPassword "jz1234"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file("jz1234.jks")
+            storePassword "jz1234"
+            keyAlias "jz1234"
+            keyPassword "jz1234"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    productFlavors {
+        ziyou_001 {}
+    }
 
     buildTypes {
-        release {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            zipAlignEnabled false
+            debuggable true
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+
+                    def fileName = "jz_${variant.name}_v${variant.versionName}}.apk"
+                    output.outputFileName  =fileName
+                }
+            }
+
         }
     }
     compileOptions {
