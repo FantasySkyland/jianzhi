@@ -5,12 +5,18 @@ import android.content.Context;
 import android.content.Intent;
 
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.example.tijianapplication.MainActivity2;
 import com.example.tijianapplication.R;
 import com.example.tijianapplication.fragment.SlbFragment;
 import com.example.tijianapplication.fragment.TestColorFragment;
@@ -22,7 +28,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.parttime.base.base.BaseActivity;
 import com.parttime.base.constants.RoutMap;
 import com.parttime.base.rx.RxEvent;
-import com.parttime.base.util.ToastUtils;
 
 import java.util.ArrayList;
 
@@ -51,43 +56,26 @@ public class MainActivity extends BaseActivity {
     }
 
 
-//    @Override
-//    protected void initSavedInstance(Bundle savedInstanceState) {
-//        if (savedInstanceState!=null){
-//            currentId = savedInstanceState.getInt(BUNDLE_CACHE_INDEX_KEY,-1);
-//            //如果已经添加过fragment, 需要隐藏操作
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction transaction = fragmentManager.beginTransaction();
-//            homeFragment = (HomeFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG+R.id.rb_home);
-//            recommendFragment = (RecommendFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG+R.id.rb_recommend);
-//            allFragment = (HotFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG+R.id.rb_all);
-//            mineFragment = (MineFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG+R.id.rb_mine);
-//            if (homeFragment!=null){
-//                transaction.hide(homeFragment);
-//            }
-//            if (recommendFragment!=null){
-//                transaction.hide(recommendFragment);
-//            }
-//            if (allFragment!=null){
-//                transaction.hide(allFragment);
-//            }
-//            if (mineFragment!=null){
-//                transaction.hide(mineFragment);
-//            }
-//            transaction.commit();
-//            if (currentId!=-1){
-//                rg_menu.check(currentId);
-//            }else {
-//                rg_menu.check(R.id.rb_home);
-//            }
-//        }
-//
-//    }
-
     @Override
     protected void initWidget() {
         viewpager = findViewById(R.id.viewpager);
         tab = findViewById(R.id.tab);
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout_main);
+        ImageView iv_nav = findViewById(R.id.iv_nav);
+        TextView tv_setting = findViewById(R.id.tv_setting);
+        tv_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                AboutUsActivity.start(MainActivity.this);
+            }
+        });
+        iv_nav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
         StatusBarUtils.statusbar(this);
         fragments.add(new SlbFragment());
         fragments.add(new TestEyesFragment());

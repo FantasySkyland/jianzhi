@@ -1,35 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_layout_main"
     tools:context=".activity.MainActivity">
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorPrimary" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/black"
-        android:text="体检测试"
-        android:gravity="center"
-        android:textSize="18sp"/>
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab"
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorFullWidth="true"
-        app:tabIndicatorHeight="2dp"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabSelectedTextColor="@color/black"
-        app:tabMode="scrollable" />
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimary" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/iv_nav"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:src="@mipmap/menu_nav"/>
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:text="Physical examination"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/black"
+            app:tabMode="scrollable" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/nav_bg"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_B8B7BA" />
+
+        <TextView
+            android:id="@+id/tv_setting"
+            android:text="setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:drawableTint="@color/black"
+            android:drawableLeft="@mipmap/icon_menu_setting"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_B8B7BA" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

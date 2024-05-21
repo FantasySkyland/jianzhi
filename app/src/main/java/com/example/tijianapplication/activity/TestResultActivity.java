@@ -76,73 +76,73 @@ public class TestResultActivity extends BaseActivity {
             String shili = ShiLiEView2.getShiLiStr(data);
             tv_result.setText(ShiLiEView2.getShiLiStr(data));
             if (data<9){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为650度以上，, 您的视力有点惨不忍睹，请带上眼镜测试下矫正后的视力吧",
+                tv_result_desc.setText(String.format("Your vision is %s,Myopia degree is more than 650 degrees.Your vision is a bit terrible. Please wear glasses to test your corrected vision",
                         shili));
             }else if (data == 9){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为650, 您的视力有点惨不忍睹，请带上眼镜测试下矫正后的视力吧",
+                tv_result_desc.setText(String.format("Your vision is %s,Myopia degree is 650 .Your vision is a bit terrible. Please wear glasses to test your corrected vision",
                         shili));
             }else if (data == 10){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为550, 您的视力有点惨不忍睹，请带上眼镜测试下矫正后的视力吧",
+                tv_result_desc.setText(String.format("Your vision is %s,Myopia degree is 550 .Your vision is a bit terrible. Please wear glasses to test your corrected vision",
                         shili));
             }else if (data == 11){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为500, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 500 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 12){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为450, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 450 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 13){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为400, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 400 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 14){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为300, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 300 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 15){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为250, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 250 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 16){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为200, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 200 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 17){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为150, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 150 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data == 18){
-                tv_result_desc.setText(String.format("您的视力是%s,近视度数为100, 您的用眼习惯有问题,请改进你的用眼习惯",
+                tv_result_desc.setText(String.format("Your vision is %s.Myopia degree is 100 .There is something wrong with your eye usage habits, please improve your eye usage habits",
                         shili));
             }else if (data > 18){
-                tv_result_desc.setText(String.format("您的视力是%s,无需佩戴眼镜, 太棒了，请您继续保持良好的用眼习惯，加油",
+                tv_result_desc.setText(String.format("Your vision is %s.No need to wear glasses, that’s great, please continue to maintain good eye habits, come on",
                         shili));
             }
         } else if (type==2){
             tv_result.setVisibility(View.VISIBLE);
-            tv_result.setText(String.format("正确:%d",data));
+            tv_result.setText(String.format("correct:%d",data));
             if (data==1){
-                tv_result_desc.setText("您很大几率是色盲患者");
+                tv_result_desc.setText("You are most likely color blind");
             }else if (data==2){
-                tv_result_desc.setText("您很大几率是色盲患者");
+                tv_result_desc.setText("You are most likely color blind");
             }else if (data==3){
-                tv_result_desc.setText("您有患色盲的可能,请多测几次");
+                tv_result_desc.setText("You may have color blindness, please take the test several times");
             }else if (data==4){
-                tv_result_desc.setText("刚才是不是没测好，要不要再来一次");
+                tv_result_desc.setText("Did you fail the test just now? Do you want to try it again?");
             }else if (data==5){
-                tv_result_desc.setText("恭喜您,您有没有色盲症状");
+                tv_result_desc.setText("Congratulations, you have no symptoms of color blindness");
             }else if (data==0){
-                tv_result_desc.setText("您很大几率是色盲患者");
+                tv_result_desc.setText("You are most likely color blind");
             }
 
         }else if (type==3){
             tv_result.setVisibility(View.VISIBLE);
             if (data==1){
-                tv_result.setText("疑似");
-                tv_result_desc.setText("您有散光症状");
+                tv_result.setText("suspected");
+                tv_result_desc.setText("You have symptoms of astigmatism");
             }else {
-                tv_result.setText("正常");
-                tv_result_desc.setText("恭喜您,您有没有散光症状");
+                tv_result.setText("normal");
+                tv_result_desc.setText("Congratulations, you have no symptoms of astigmatism");
             }
 
         }else if (type==4){
             line.setVisibility(View.INVISIBLE);
             tv_result.setVisibility(View.GONE);
-            tv_result_desc.setText(String.format("您总共通过了%d关",data));
+            tv_result_desc.setText(String.format("You have passed %d levels in total",data));
         }
     }
 

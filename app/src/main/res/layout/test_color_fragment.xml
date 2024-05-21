@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="倒计时:"
+        android:text="Countdown:"
         android:textColor="@color/black"/>
     <TextView
         android:layout_toEndOf="@id/tv_count_down_title"
@@ -30,16 +30,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="关卡"
+        android:text="level"
         android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tv_tip"
-        android:layout_below="@id/tv_count_down"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="请选择颜色不一样的色块"/>
+        android:layout_below="@id/tv_count_down"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:text="Please choose a color block with a different color" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_marginTop="10dp"

@@ -258,8 +258,7 @@ public class TestEyesFragment extends BaseFragment {
         } else {
             showResult();
         }
-        Log.e("resunt","mIndex:"+mIndex+"currentCount:"+currentCount+"currentCorrect:"+currentCorrect
-                +"currentError:"+currentError+"currentError:"+mDirect);
+
     }
 
     private void showResult() {

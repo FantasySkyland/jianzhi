@@ -19,24 +19,27 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="13sp"
+        android:gravity="center_horizontal"
         android:textColor="@color/color_939393"
-        android:text="保持手机在眼前40cm处，选择E的朝向" />
+        android:text="Keep the phone 40cm in front of your eyes and choose the direction of E" />
 
     <LinearLayout
         android:id="@+id/result_icon"
-        android:layout_marginTop="60dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="49dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
     <TextView
         android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:padding="10dp"
         android:id="@+id/tv_shili"
         android:layout_width="wrap_content"
@@ -53,7 +56,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textColor="@color/black"
-        android:text="上"
+        android:text="up"
         android:drawableTop="@mipmap/top"/>
     <TextView
         android:layout_alignRight="@id/shi_e_view"
@@ -66,7 +69,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textColor="@color/black"
-        android:text="左"
+        android:text="left"
         android:drawablePadding="10dp"
         android:drawableLeft="@mipmap/left"/>
     <TextView
@@ -80,7 +83,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textColor="@color/black"
-        android:text="右"
+        android:text="right"
         android:drawablePadding="10dp"
         android:drawableRight="@mipmap/right"/>
     <TextView
@@ -94,7 +97,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textColor="@color/black"
-        android:text="下"
+        android:text="down"
         android:drawableBottom="@mipmap/bottom"/>
     <TextView
         android:layout_centerHorizontal="true"
@@ -107,5 +110,5 @@
         android:layout_height="wrap_content"
         android:textSize="13sp"
         android:textColor="@color/black"
-        android:text="看不清楚" />
+        android:text="unclear" />
 </RelativeLayout>

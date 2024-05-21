@@ -110,7 +110,7 @@ public class TestColorFragment extends BaseFragment {
     }
 
     private void refreshData(){
-        tv_level.setText(String.format("关卡:%d",level+1));
+        tv_level.setText(String.format("level:%d",level+1));
         int colorIndex;
         colorIndex  = level%9;
         spanCount = 2+level/3;

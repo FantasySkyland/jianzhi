@@ -90,27 +90,27 @@ public class TestSmFragment extends BaseFragment {
             mButtonView.setText("6");
             mButtonView2.setText("8");
             circleImageView.setImageResource(R.drawable.sm1);
-            text.setText("1,请选择你看到的数字");
+            text.setText("1,Please select the number you see");
         }else if (currentCount==1){
             mButtonView.setText("26");
             mButtonView2.setText("28");
             circleImageView.setImageResource(R.drawable.sm2);
-            text.setText("2,请选择你看到的数字");
+            text.setText("2,Please select the number you see");
         }else if (currentCount==2){
-            mButtonView.setText("小鸭");
-            mButtonView2.setText("天鹅");
+            mButtonView.setText("duck");
+            mButtonView2.setText("swan");
             circleImageView.setImageResource(R.drawable.sm3);
-            text.setText("3,请选择你看到的动物");
+            text.setText("3,Please select the animal you saw");
         }else if (currentCount==3){
             mButtonView.setText("26");
             mButtonView2.setText("25");
             circleImageView.setImageResource(R.drawable.sm4);
-            text.setText("4,请选择你看到的数字");
+            text.setText("4,Please select the number you see");
         }else if (currentCount==4){
-            mButtonView.setText("金鱼");
-            mButtonView2.setText("老虎");
+            mButtonView.setText("goldfish");
+            mButtonView2.setText("tiger");
             circleImageView.setImageResource(R.drawable.sm5);
-            text.setText("5,请选择你看到的动物");
+            text.setText("5,Please select the animal you saw");
         }else {
             TestResultActivity.start(getContext(),2,  correctCount );
             currentCount = 0;
@@ -118,7 +118,7 @@ public class TestSmFragment extends BaseFragment {
             mButtonView.setText("6");
             mButtonView2.setText("8");
             circleImageView.setImageResource(R.drawable.sm1);
-            text.setText("1,请选择你看到的数字");
+            text.setText("1,Please select the number you see");
         }
     }
 

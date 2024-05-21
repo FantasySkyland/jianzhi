@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_vertical"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -39,30 +34,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="请直视图片，选择您的观察结果"
-        android:textColor="#000000"
+        android:text="Please look directly at the picture and choose your observations"
+        android:textColor="@color/color_939393"
+        android:gravity="center_horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonView6"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/teal_200"
-        android:text="图中有某条线较粗"
+        android:textAllCaps="false"
+        android:text="There is a line in the picture that is thicker"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView25" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonView7"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/teal_200"
-        android:text="图中线条粗细均匀"
+        android:text="The lines in the picture are even in thickness"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonView6" />

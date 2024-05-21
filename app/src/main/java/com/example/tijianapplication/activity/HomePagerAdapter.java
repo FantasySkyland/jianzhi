@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class HomePagerAdapter extends FragmentPagerAdapter {
 
-    private String[] titles = new String[]{"视力表","视力测试","色盲测试","散光测试","颜色敏感度测试"};
+    private String[] titles = new String[]{"Eye chart","vision test","color blindness test","Astigmatism test","Color sensitivity test"};
     private ArrayList<Fragment> fragments;
     public HomePagerAdapter(@NonNull FragmentManager fm , ArrayList<Fragment> fragments){
         super(fm);
