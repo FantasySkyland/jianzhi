@@ -1,13 +1,15 @@
 plugins {
     id 'com.android.application'
 }
-
+def static BuildTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+8"))
+}
 android {
     compileSdkVersion rootProject.ext.compileSdk
     buildToolsVersion rootProject.ext.buildTools
 
     defaultConfig {
-        applicationId "com.example.tijianapplication"
+        applicationId "com.tj.tijianapplication"
         minSdkVersion rootProject.ext.minSdk
         targetSdkVersion rootProject.ext.targetSdk
         versionCode rootProject.ext.versionCode
@@ -68,8 +70,10 @@ android {
             variant.outputs.each { output ->
                 def outputFile = output.outputFile
                 if (outputFile != null && outputFile.name.endsWith('.apk')) {
-
-                    def fileName = "jz_${variant.name}_v${variant.versionName}}.apk"
+                    def fileName = "jz_${variant.name}_v${variant.versionName}_${BuildTime()}.apk"
+                    output.outputFileName  =fileName
+                }else if (outputFile != null && outputFile.name.endsWith('.aab')){
+                    def fileName = "jz_${variant.name}_v${variant.versionName}_${BuildTime()}.aab"
                     output.outputFileName  =fileName
                 }
             }

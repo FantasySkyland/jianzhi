@@ -15,7 +15,8 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.TiJianApplication.NoActionBar"></activity>
         <activity android:name=".activity.AboutUsActivity" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
