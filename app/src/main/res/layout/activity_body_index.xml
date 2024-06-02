@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/login_bg"/>
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/transparent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:tint="@color/white"
+            android:src="@mipmap/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="BMI"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_below="@id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/tv_tz_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight："
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"/>
+
+            <EditText
+                android:id="@+id/et_tz"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tz_title"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_et_bg"
+                android:hint="enter your weight"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignTop="@id/et_tz"
+                android:layout_toRightOf="@id/et_tz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="kg"/>
+
+            <TextView
+                android:id="@+id/tv_sg_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_tz"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:text="Height："
+                android:textSize="30sp" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/et_sg"
+                android:layout_marginStart="40dp"
+                android:padding="10dp"
+                android:background="@drawable/shape_et_bg"
+                android:layout_below="@+id/tv_sg_title"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="enter your height"
+                />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignTop="@id/et_sg"
+                android:layout_toRightOf="@id/et_sg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="cm"/>
+
+            <Button
+                android:id="@+id/bt_js"
+                android:layout_below="@id/et_sg"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:text="@string/calculate"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_tv_bg1"/>
+        </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/rl_content"
+        android:id="@+id/desc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/color_656565"
+        android:layout_marginStart="15dp"
+        android:text="@string/desc"/>
+    <TextView
+        android:layout_below="@id/desc_title"
+        android:id="@+id/tv_desc_1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="15dp"
+        />
+    <TextView
+        android:layout_below="@id/tv_desc_1"
+        android:id="@+id/tv_desc_2"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="2.The ideal BMI is about 22"
+        android:layout_marginStart="15dp"
+        />
+    <TextView
+        android:layout_below="@id/tv_desc_2"
+        android:id="@+id/tv_desc_3"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="3.For most people, the calculated results of the body mass index are relatively accurate. However, if you have well-developed muscles or are an athlete, this index will overestimate your fat content. In this case, being overweight does not necessarily mean being obese; on the contrary, if your muscles are not well-developed, the index will underestimate your body fat."
+        android:layout_marginStart="15dp"
+        />
+    <TextView
+        android:layout_below="@id/tv_desc_3"
+        android:id="@+id/tv_desc_4"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="4.Although body mass index is often used to measure the degree of fatness or thinness of a person, other indicators should be used to truly assess whether a person is obese, such as waist-to-height ratio, fat thickness, etc."
+        android:layout_marginStart="15dp"
+        />
+</RelativeLayout>

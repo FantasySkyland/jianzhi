@@ -11,4 +11,12 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="age">age</string>
+    <string name="age_unit">age</string>
+    <string name="weight">Weight</string>
+    <string name="weight_unit">kg</string>
+    <string name="height_unit">cm</string>
+    <string name="height_">Height</string>
+    <string name="desc">Illustrate</string>
+    <string name="calculate">calculate</string>
 </resources>

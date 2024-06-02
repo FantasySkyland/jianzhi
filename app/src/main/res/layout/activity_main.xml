@@ -12,10 +12,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
         <View
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:background="@color/colorPrimary" />
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,25 +37,210 @@
                 android:background="@color/colorPrimary"
                 android:textColor="@color/black"
                 android:layout_centerInParent="true"
-                android:text="Physical examination"
+                android:text="Health Management"
                 android:textSize="18sp"/>
         </RelativeLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab"
-            android:background="@color/colorPrimary"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabIndicatorFullWidth="true"
-            app:tabIndicatorHeight="2dp"
-            app:tabIndicatorColor="@color/colorAccent"
-            app:tabSelectedTextColor="@color/black"
-            app:tabMode="scrollable" />
+            android:layout_height="200dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="30dp"
+            app:contentPaddingBottom="30dp"
+            android:paddingBottom="30dp"
+            android:layout_below="@id/rl_top"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/health_card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="Health management tools"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/health_card_title"
+                    android:text="——  Keep track of your health at all times  ——"/>
+            </RelativeLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager"
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view_center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_toLeftOf="@id/view_center"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/cd_body_index"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="35dp"
+                android:paddingBottom="30dp"
+                app:cardBackgroundColor="@color/teal_200"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+                <RelativeLayout
+                    android:id="@+id/rl_index"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:tint="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/chart2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Body mass index"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_toRightOf="@id/view_center"
+                android:layout_marginStart="30dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="30dp"
+                android:paddingBottom="30dp"
+                app:cardBackgroundColor="@color/color_F46B20"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+                <RelativeLayout
+                    android:id="@+id/rl_calorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:tint="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/fire2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Calorie intake"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_toLeftOf="@id/view_center"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@id/cd_body_index"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="25dp"
+                android:paddingBottom="30dp"
+                app:cardBackgroundColor="@color/color_money"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+                <RelativeLayout
+                    android:id="@+id/rl_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:tint="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/heart1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Heart rate"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_toRightOf="@id/view_center"
+                android:layout_marginStart="30dp"
+                android:layout_below="@id/cd_body_index"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="25dp"
+                android:paddingBottom="30dp"
+                app:cardBackgroundColor="@color/color_656565"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+                <RelativeLayout
+                    android:id="@+id/rl_smoke"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:tint="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/smoke2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Smoking shortens life"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="200dp"
@@ -77,6 +263,21 @@
         <TextView
             android:id="@+id/tv_setting"
             android:text="setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:drawableTint="@color/black"
+            android:drawableLeft="@mipmap/icon_menu_setting"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_B8B7BA" />
+        <TextView
+            android:id="@+id/tv_yszc"
+            android:text="Privacy Policy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"

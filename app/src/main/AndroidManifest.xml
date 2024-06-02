@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tijianapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".PartTimeApplication"
         android:allowBackup="true"
@@ -15,6 +17,11 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.TiJianApplication.NoActionBar"></activity>
         <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.BodyIndexActivity" />
+        <activity android:name=".activity.HeartRateActivity" />
+        <activity android:name=".activity.CalculatorActivity" />
+        <activity android:name=".activity.SmokeActivity" />
+        <activity android:name=".activity.WebActivity" />
         <activity android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>

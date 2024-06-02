@@ -46,10 +46,6 @@ dependencies {
     api 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     api 'androidx.recyclerview:recyclerview:1.1.0'
-    annotationProcessor ("com.jakewharton:butterknife-compiler:${rootProject.ext.butterknife}"){
-        exclude module: 'appcompat-v7'
-        exclude group: 'com.android.support'
-    }
     //arouter
     api "com.alibaba:arouter-api:${rootProject.ext.arouter_api}"
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter_annotation}"
@@ -70,7 +66,7 @@ dependencies {
     api 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.2'
     api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
     api 'com.trello.rxlifecycle2:rxlifecycle-navi:2.2.2'
-
+    api 'joda-time:joda-time:2.12.7'
 //    api 'org.projectlombok:lombok:1.16.6'
 //    api 'org.glassfish:javax.annotation:10.0-b28'
     // 带侧边字母的列表

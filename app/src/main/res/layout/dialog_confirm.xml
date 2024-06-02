@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/shape_cn10_white"
+        >
+        <TextView
+            android:id="@+id/tv_nl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="Calculation results"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text=""
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/color_0d0d0d"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:textSize="18sp"
+            android:text="recalculate"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_tv_bg1"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

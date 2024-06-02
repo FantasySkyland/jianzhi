@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@mipmap/login_bg"/>
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/transparent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:tint="@color/white"
+            android:src="@mipmap/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="@string/calculate"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+            <TextView
+                android:id="@+id/tv_nl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age：     "
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/et_nl"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_nl_title"
+                android:layout_toRightOf="@+id/tv_nl_title"
+                android:background="@drawable/shape_et_bg"
+                android:hint="enter your age"
+                android:inputType="number"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignTop="@id/et_nl"
+                android:layout_toRightOf="@id/et_nl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_tz_title"
+                android:layout_below="@id/tv_nl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight："
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/et_tz"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_tz_title"
+                android:layout_toRightOf="@+id/tv_tz_title"
+                android:background="@drawable/shape_et_bg"
+                android:hint="enter your weight"
+                android:inputType="number"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignTop="@id/et_tz"
+                android:layout_toRightOf="@id/et_tz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="kg"/>
+
+            <TextView
+                android:id="@+id/tv_sg_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_tz"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:text="Height："
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_sg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_sg_title"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@+id/tv_sg_title"
+                android:background="@drawable/shape_et_bg"
+                android:hint="enter your height"
+                android:inputType="number"
+                android:minWidth="150dp"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignTop="@id/et_sg"
+                android:layout_toRightOf="@id/et_sg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="cm"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_xb_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_sg"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:text="Male："
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/rg_xb"
+                android:layout_alignTop="@id/tv_xb_title"
+                android:layout_toRightOf="@id/tv_xb_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:checked="true"
+                    android:text="man"/>
+
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="woman"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_yd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_xb_title"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:text="Basal metabolic rate："
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/rg_yd"
+                android:layout_below="@id/tv_yd_title"
+                android:layout_alignLeft="@id/tv_yd_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_yd_1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:checked="true"
+                    android:text="little/no exercise (sedentary lifestyle)"/>
+
+                <RadioButton
+                    android:id="@+id/rb_yd_2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="light exercise 1-2 times/week"/>
+                <RadioButton
+                    android:id="@+id/rb_yd_3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="moderate exercise 2-3 times/week"/>
+
+                <RadioButton
+                    android:id="@+id/rb_yd_4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="hard exercise 4-5 times/week"/>
+                <RadioButton
+                    android:id="@+id/rb_yd_5"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="physical job or hard exercise 6-7 times/week"/>
+                <RadioButton
+                    android:id="@+id/rb_yd_6"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="professional athlete"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/bt_js"
+                android:layout_below="@id/rg_yd"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:text="@string/calculate"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_tv_bg1"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/bt_js"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text=""/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
